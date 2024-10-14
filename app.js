@@ -9,13 +9,13 @@ let bigliettoBase = km * 0.21
 //Pui di 65 anni sconto del 40%
 if (age < 18) {
     let sconto = bigliettoBase * 20 / 100
-    let prezzoScontato = sconto
-    console.log("Il costo del biglietto e': " + prezzoScontato + "€")
+    let prezzoScontato = bigliettoBase - sconto
+    console.log("Il costo del biglietto e': " + prezzoScontato.toFixed(2) + "€")
 }
 else if (age > 65) {
     let sconto = bigliettoBase * 40 / 100
-    let prezzoScontato = sconto
-    console.log("Il costo del biglietto e': " + prezzoScontato + "€")
+    let prezzoScontato = bigliettoBase - sconto
+    console.log("Il costo del biglietto e': " + prezzoScontato.toFixed(2) + "€")
 }
 else {
     console.log("Il costo del biglietto e': " + bigliettoBase + "€")
